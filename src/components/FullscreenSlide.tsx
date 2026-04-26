@@ -18,7 +18,7 @@ const FullscreenSlide = forwardRef<HTMLElement, FullscreenSlideProps>(
     return (
       <section
         ref={ref}
-        className="relative flex min-h-screen snap-start items-stretch px-3 py-3 sm:px-4 sm:py-5 md:px-8 md:py-7"
+        className="relative flex min-h-screen snap-start items-start px-3 py-3 sm:px-4 sm:py-5 md:px-8 md:py-7"
       >
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute left-[-8%] top-[-15%] h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl md:h-96 md:w-96" />
@@ -30,7 +30,7 @@ const FullscreenSlide = forwardRef<HTMLElement, FullscreenSlideProps>(
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ amount: 0.35, once: true }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="glass-panel grid-line relative flex w-full flex-col overflow-hidden rounded-[1.6rem] p-4 pb-32 sm:rounded-[2rem] sm:p-6 sm:pb-28 md:rounded-[2.5rem] md:p-10 md:pb-24"
+          className="glass-panel grid-line relative flex min-h-[calc(100vh-1.5rem)] w-full flex-col overflow-hidden rounded-[1.6rem] p-4 pb-32 sm:min-h-[calc(100vh-2.5rem)] sm:rounded-[2rem] sm:p-6 sm:pb-28 md:min-h-[calc(100vh-3.5rem)] md:rounded-[2.5rem] md:p-10 md:pb-24"
         >
           <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
             <div className="max-w-4xl">
@@ -49,7 +49,7 @@ const FullscreenSlide = forwardRef<HTMLElement, FullscreenSlideProps>(
             </div>
           </div>
 
-          <div className="mt-8 flex-1">{children}</div>
+          <div className="mt-8">{children}</div>
         </motion.div>
       </section>
     );

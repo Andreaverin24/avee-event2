@@ -192,7 +192,7 @@ function App() {
             summary={slide.summary}
           >
             {slide.id === "hero" ? (
-              <div className="grid h-full gap-8 xl:grid-cols-[1.2fr_0.8fr]">
+              <div className="grid gap-8 xl:grid-cols-[1.2fr_0.8fr]">
                 <div className="flex flex-col justify-between gap-8">
                   <div className="space-y-8">
                     <div className="flex flex-wrap items-center gap-3">
@@ -837,7 +837,7 @@ function App() {
             ) : null}
 
             {slide.id === "takeaway" ? (
-              <div className="flex h-full flex-col justify-between gap-8">
+              <div className="flex flex-col justify-between gap-8">
                 <div className="grid gap-8 xl:grid-cols-[1.1fr_0.9fr]">
                   <div className="rounded-[2rem] border border-cyan-300/20 bg-cyan-300/10 p-6">
                     <div className="text-[0.68rem] uppercase tracking-[0.24em] text-cyan-100">
