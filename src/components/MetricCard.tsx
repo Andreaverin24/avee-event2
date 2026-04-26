@@ -39,7 +39,7 @@ export function MetricCard({
 
   return (
     <div
-      className={`relative overflow-hidden rounded-3xl border bg-slate-950/55 p-5 shadow-panel backdrop-blur-xl ${toneBorders[tone]}`}
+      className={`relative overflow-hidden rounded-[1.4rem] border bg-slate-950/55 p-4 shadow-panel backdrop-blur-xl sm:rounded-3xl sm:p-5 ${toneBorders[tone]}`}
     >
       <div
         className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${toneOverlays[tone]}`}
@@ -50,13 +50,13 @@ export function MetricCard({
             <div className="text-[0.7rem] font-medium uppercase tracking-[0.24em] text-slate-400">
               <RichText text={label} />
             </div>
-            <div className="mt-3 text-2xl font-semibold leading-tight text-white md:text-3xl">
+            <div className="mt-3 text-xl font-semibold leading-tight text-white sm:text-2xl md:text-3xl">
               <RichText text={value} />
             </div>
           </div>
           {Icon ? (
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-2.5 text-slate-200">
-              <Icon className="h-5 w-5" />
+            <div className="rounded-xl border border-white/10 bg-white/5 p-2 text-slate-200 sm:rounded-2xl sm:p-2.5">
+              <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
             </div>
           ) : null}
         </div>

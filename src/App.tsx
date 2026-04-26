@@ -575,12 +575,12 @@ function App() {
               <div className="grid gap-8 xl:grid-cols-[0.78fr_1.22fr]">
                 <div className="flex flex-col gap-5">
                   <div className="glass-panel-inner flex flex-col items-center justify-center rounded-[2rem] border border-white/10 bg-slate-950/55 p-8 text-center">
-                    <div className="metric-ring flex h-64 w-64 items-center justify-center rounded-full">
-                      <div className="rounded-full border border-white/10 bg-slate-950/90 px-10 py-10">
+                    <div className="metric-ring flex h-52 w-52 items-center justify-center rounded-full sm:h-64 sm:w-64">
+                      <div className="rounded-full border border-white/10 bg-slate-950/90 px-8 py-8 sm:px-10 sm:py-10">
                         <div className="text-[0.68rem] uppercase tracking-[0.24em] text-slate-400">
                           <RichText text="WETH: [[utilization|загрузка пула]]" />
                         </div>
-                        <div className="mt-3 text-5xl font-semibold text-white">100%</div>
+                        <div className="mt-3 text-4xl font-semibold text-white sm:text-5xl">100%</div>
                       </div>
                     </div>
                     <p className="mt-6 max-w-md text-sm leading-7 text-slate-300">
@@ -623,7 +623,7 @@ function App() {
 
                     <svg
                       viewBox={`0 0 ${chartWidth} ${chartHeight}`}
-                      className="h-[20rem] w-full"
+                      className="h-64 w-full sm:h-[20rem]"
                       role="img"
                       aria-label="График TVL и оценки оттока средств из Aave во время инцидента rsETH"
                     >

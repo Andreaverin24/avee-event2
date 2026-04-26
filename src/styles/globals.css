@@ -107,6 +107,18 @@ body {
   }
 }
 
+@media (max-width: 640px) {
+  .grid-line {
+    background-size: 40px 40px;
+  }
+
+  .eyebrow {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

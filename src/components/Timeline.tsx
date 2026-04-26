@@ -24,14 +24,14 @@ export function Timeline({ events }: TimelineProps) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ amount: 0.3, once: true }}
             transition={{ duration: 0.35, delay: index * 0.05 }}
-            className="relative pl-10 md:pl-14"
+            className="relative pl-8 md:pl-14"
           >
             <div
-              className={`absolute left-0 top-6 h-4 w-4 rounded-full ${
+              className={`absolute left-0 top-6 h-3.5 w-3.5 rounded-full md:h-4 md:w-4 ${
                 dotStyles[event.tone ?? "cyan"]
               }`}
             />
-            <div className="rounded-[1.8rem] border border-white/10 bg-slate-950/60 p-5 shadow-panel backdrop-blur-xl">
+            <div className="rounded-[1.4rem] border border-white/10 bg-slate-950/60 p-4 shadow-panel backdrop-blur-xl sm:rounded-[1.8rem] sm:p-5">
               <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                 <div className="text-sm font-medium uppercase tracking-[0.18em] text-slate-400">
                   {event.time}
@@ -42,7 +42,7 @@ export function Timeline({ events }: TimelineProps) {
                   </div>
                 ) : null}
               </div>
-              <div className="mt-3 text-xl font-semibold text-white">
+              <div className="mt-3 text-lg font-semibold text-white sm:text-xl">
                 <RichText text={event.title} />
               </div>
               <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300">
