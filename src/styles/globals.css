@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --font-display: "Space Grotesk", "Segoe UI Variable Display", "Segoe UI", sans-serif;
+  --font-body: "Sora", "Segoe UI Variable Text", "Segoe UI", sans-serif;
+  background-color: #050816;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.12), transparent 26%),
+    linear-gradient(180deg, #040712 0%, #060b19 55%, #050816 100%);
+  color: #e2e8f0;
+  font-family: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.28);
+  color: white;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+  }
+
+  p,
+  button,
+  li,
+  span,
+  div {
+    font-family: var(--font-body);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background:
+      linear-gradient(180deg, rgba(15, 23, 42, 0.88), rgba(2, 6, 23, 0.74)),
+      linear-gradient(135deg, rgba(56, 189, 248, 0.06), transparent 30%);
+    box-shadow: 0 24px 80px rgba(5, 8, 22, 0.55);
+    backdrop-filter: blur(22px);
+  }
+
+  .glass-panel-inner {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  }
+
+  .grid-line {
+    background-image:
+      linear-gradient(rgba(56, 189, 248, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(56, 189, 248, 0.045) 1px, transparent 1px);
+    background-position: center;
+    background-size: 56px 56px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    background: rgba(56, 189, 248, 0.08);
+    padding: 0.55rem 0.95rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(224, 242, 254, 0.9);
+  }
+
+  .metric-ring {
+    background:
+      radial-gradient(circle at center, rgba(2, 6, 23, 0.88) 52%, transparent 53%),
+      conic-gradient(from 180deg, rgba(56, 189, 248, 0.96), rgba(139, 92, 246, 0.86), rgba(56, 189, 248, 0.96));
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.08),
+      0 18px 56px rgba(5, 8, 22, 0.45),
+      inset 0 0 40px rgba(56, 189, 248, 0.12);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.7), rgba(139, 92, 246, 0.7));
+}
